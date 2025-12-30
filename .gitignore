@@ -205,3 +205,24 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# --- Custom BigQuery & GCP Settings ---
+
+# 1. 安全性：絕對不能上傳的金鑰與憑證
+*.json
+key.json
+service_account.json
+credentials.json
+client_secrets.json
+.env
+
+# 2. 數據：避免上傳大型數據或機密資料
+*.csv
+*.xlsx
+*.xls
+*.parquet
+
+# 3. IDE 設定 (如果你用 VS Code 或 Mac)
+.vscode/
+.idea/
+.DS_Store
